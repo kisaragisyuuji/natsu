@@ -12,7 +12,7 @@
 
 ### Association
 - has_many :sweets
-- has_many :Comments
+- has_many :comments
 
 ## sweetテーブル
 |Colum|Type|Options|
@@ -24,9 +24,9 @@
 
 ### Association
 - belongs_to :user
-- has_many :Comments
+- has_many :comments
 
-## Commentテーブル
+## commentテーブル
 |Colum|Type|Optins|
 |-----|----|------|
 |text|text|null:false|

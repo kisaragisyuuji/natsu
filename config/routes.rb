@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :sweets, only: [:index]
-  root to: 'sweets#index'
+  devise_for :users
+  
+  resources :sweets, only: [:index, :new, :create]
+  get '/top', to: "sweet#top"
+  root to: 'sweets#top'
 end
