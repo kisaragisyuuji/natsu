@@ -19,7 +19,7 @@
 |-----|----|-------|
 |name|string|null: false, add_index: sweet, unique: true|
 |user_id|integer|null: false, foreign_key: true|
-|image|text|
+|image|text|null: false|
 |description|text|null: false|
 
 ### Association
