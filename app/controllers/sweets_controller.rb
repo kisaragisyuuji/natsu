@@ -24,6 +24,13 @@ class SweetsController < ApplicationController
 
   def show
   end
+
+  def edit
+  end
+
+  def update
+  end
+  
   
   def sweet_params
     params.require(:sweet).permit(:name, :image, :description).merge(user_id: current_user.id)
