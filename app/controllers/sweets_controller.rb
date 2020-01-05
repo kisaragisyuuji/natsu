@@ -4,8 +4,7 @@ class SweetsController < ApplicationController
   end
 
   def index
-    # 一覧する予定
-    # @sweet = Sweet.all
+     @sweet = Sweet.all
   end
 
   def new
