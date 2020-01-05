@@ -5,7 +5,7 @@
       .newcontent__name
         = form.text_field :name, placeholder: "スイーツの名前"
       .newcontent__image
-        = form.text_field :image, placeholder: "画像"
+        = form.file_field :image, type:"file", placeholder: "画像"
       .newcontent__description
         = form.text_area :description, placeholder: "スイーツの内容"
       .newcintent__submit

@@ -13,7 +13,7 @@ class SweetsController < ApplicationController
 
   def create
     @sweet = Sweet.new(sweet_params)
-    if sweet.save
+    if @sweet.save
       flash[:notice] = '投稿しました'
       redirect_to sweets_path
     else
@@ -23,7 +23,7 @@ class SweetsController < ApplicationController
   end
   
   def sweet_params
-    params.require(:sweet).permit(:name, :image, :descripition).merge(user_id: current_user.id)
+    params.require(:sweet).permit(:name, :image, :description).merge(user_id: current_user.id)
   end
 
 end
