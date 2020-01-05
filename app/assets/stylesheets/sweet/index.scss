@@ -1,0 +1,20 @@
+.indexbox {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  .formone {
+    background-color: red;
+    padding: 40px 20px;
+
+    &__title {
+      font-size: 45px;
+      font-weight: bold;
+      color: #2474aa;
+      text-align: center;
+    }
+    &__box {
+
+    }
+  }
+}

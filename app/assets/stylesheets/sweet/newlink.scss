@@ -1,0 +1,31 @@
+.allbtn {
+  background-color: #16aa65;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  .newbtn {
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    cursor: pointer;
+    z-index: 1;
+
+    &__text {
+      width: 100px;
+      height: 90px;
+      font-size: 25px;
+      text-align: center;
+      background-color:#a8c931;
+      color: #321da7;
+      border-radius: 30%;
+      a{
+        color: #fff;
+      }
+      .fa.fa-paper-plane {
+        font-size: 40px;
+      }
+    }
+  }
+}
