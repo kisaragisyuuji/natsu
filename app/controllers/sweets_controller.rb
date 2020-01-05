@@ -23,6 +23,7 @@ class SweetsController < ApplicationController
   end
 
   def show
+    @sweet = Sweet.find(params[:id])
   end
 
   def edit
@@ -30,7 +31,7 @@ class SweetsController < ApplicationController
 
   def update
   end
-  
+
   
   def sweet_params
     params.require(:sweet).permit(:name, :image, :description).merge(user_id: current_user.id)
