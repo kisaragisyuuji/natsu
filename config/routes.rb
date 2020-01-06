@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  resources :sweets, only: [:index, :new, :create, :show, :edit, :update]
+  resources :sweets
   get '/top', to: "sweet#top"
   root to: 'sweets#top'
 end

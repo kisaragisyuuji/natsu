@@ -1,1 +1,15 @@
-editページ
+.newbox
+  = form_with(model: @sweet, local: true) do |form|
+    .heart
+    .heart1
+    .newcontent
+      %h6 貴方のスイーツ編集
+      .newcontent__name
+        = form.text_field :name, placeholder: "スイーツの名前"
+      .newcontent__image
+        = form.label :image, class: "btn btn-default"
+        = form.file_field :image, class: "file",style: "display:none;"
+      .newcontent__description
+        = form.text_area :description, placeholder: "スイーツの内容", size: "70x10"
+      .newcontent__submit
+        = form.submit "編集する"

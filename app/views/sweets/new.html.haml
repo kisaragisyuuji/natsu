@@ -7,8 +7,8 @@
       .newcontent__name
         = form.text_field :name, placeholder: "スイーツの名前"
       .newcontent__image
-        = form.label :"画像を投稿←クリック"
-        = form.file_field :image, type:"file", placeholder: "画像", style: "display: none" 
+        = form.label :image, class: "btn btn-default"
+        = form.file_field :image, class: "file",style: "display:none;"
       .newcontent__description
         = form.text_area :description, placeholder: "スイーツの内容", size: "70x10"
       .newcontent__submit
