@@ -2,15 +2,27 @@
   height: 100%;
   width: 100%;
   
-  
   .sweetmain {
     background-color: rgb(245, 211, 196);
-    
     padding: 30px 40px;
     display: block;
-    .seweettitle {
+    &__title {
       text-align: center;
-      border: 1px solid #ddbf37;
+      font-size: 50px;
+      font-weight: bold;
+      height: 80px;
+      h7 {
+        display: inline-block;
+        border: 2px solid #ddbf37;
+        padding: 10px 20px;
+      }
+    }
+    &__second {
+      background-color: #8f147e;
+      margin-top: 20px;
+      &__image {
+        
+      }
     }
   }
 }

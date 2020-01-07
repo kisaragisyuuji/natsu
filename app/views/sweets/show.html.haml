@@ -6,6 +6,10 @@
 
 .showall
   .sweetmain
-    .seweettitle
+    .sweetmain__title
       %h7
         = @sweet.name
+    .sweetmain__second
+      .sweetmain__second__image
+        = image_tag @sweet.image.url, size: "500x400"
+
