@@ -10,7 +10,9 @@
       %h7
         = @sweet.name
     .sweetmain__second
-    
       .sweetmain__second__image
         = image_tag @sweet.image.url, size: "500x400"
-
+    .sweetmain__textbox
+      .sweetmain__textbox__line
+        .sweetmain__textbox__line__dec
+          = @sweet.description

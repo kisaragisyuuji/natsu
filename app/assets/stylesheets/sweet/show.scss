@@ -6,6 +6,7 @@
     background-color: rgb(245, 211, 196);
     padding: 30px 40px;
     display: block;
+
     &__title {
       text-align: center;
       font-size: 50px;
@@ -17,11 +18,29 @@
         padding: 10px 20px;
       }
     }
+
     &__second {
       background-color: #8f147e;
-      margin-top: 20px;
+      margin-top: 70px;
       &__image {
-        
+        text-align: center;
+      }
+    }
+
+    &__textbox {
+      background-color: chartreuse;
+      margin-top: 40px;
+      
+
+      &__line{
+        display: inline-block;
+        border: 2px solid #ddbf37;
+        padding: 10px 20px;
+        background-color: red;
+        width: 95%;
+        &__dec{
+          font-size: 20px;
+        }
       }
     }
   }
