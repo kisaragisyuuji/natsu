@@ -1,5 +1,11 @@
-詳細ページ
-.test33
-  = @sweet.name
-  = link_to "編集する", edit_sweet_path(@sweet.id)
-  = link_to "削除する", sweet_path(@sweet.id), method: :delete
+-# 詳細ページ
+-# .test33
+-#   = @sweet.name
+-#   = link_to "編集する", edit_sweet_path(@sweet.id)
+-#   = link_to "削除する", sweet_path(@sweet.id), method: :delete
+
+.showall
+  .sweetmain
+    .seweettitle
+      %h7
+        = @sweet.name
