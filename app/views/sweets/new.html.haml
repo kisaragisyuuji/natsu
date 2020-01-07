@@ -1,12 +1,15 @@
 .newbox
-  .newcontent
-    = form_with(model: @sweet, local: true) do |form|
-      %h2 新規投稿
+  = form_with(model: @sweet, local: true) do |form|
+    .heart
+    .heart1
+    .newcontent
+      %h6 貴方のスイーツ投稿
       .newcontent__name
         = form.text_field :name, placeholder: "スイーツの名前"
       .newcontent__image
-        = form.file_field :image, type:"file", placeholder: "画像"
+        = form.label :image, class: "btn btn-default"
+        = form.file_field :image, class: "file",style: "display:none;"
       .newcontent__description
-        = form.text_area :description, placeholder: "スイーツの内容"
-      .newcintent__submit
-        = form.submit "投稿"
+        = form.text_area :description, placeholder: "スイーツの内容", size: "70x10"
+      .newcontent__submit
+        = form.submit "投稿する"
