@@ -2,3 +2,4 @@
 .test33
   = @sweet.name
   = link_to "編集する", edit_sweet_path(@sweet.id)
+  = link_to "削除する", sweet_path(@sweet.id), method: :delete

@@ -1,5 +1,5 @@
 class SweetsController < ApplicationController
-  before_action :set_sweet, only:[:show, :edit, :update]
+  before_action :set_sweet, only:[:show, :edit, :update, :destroy]
   def top
   end
 
@@ -38,6 +38,8 @@ class SweetsController < ApplicationController
 
   
   def destroy
+    @sweet.destroy
+    redirect_to sweets_path
   end
 
   def set_sweet
