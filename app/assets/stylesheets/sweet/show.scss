@@ -31,7 +31,6 @@
       background-color: chartreuse;
       margin-top: 40px;
       
-
       &__line{
         display: inline-block;
         border: 2px solid #ddbf37;
@@ -43,5 +42,25 @@
         }
       }
     }
+    &__left{
+      &__user {
+        background-color: blue;
+        display: flex;
+        margin-top: 10px;
+        // float: left;
+        height: 30px;
+        &__name {
+          font-size: 20px;
+        
+        }
+        .fa-heart {
+          color: red;
+        }
+        &__good {
+          font-size: 10px;
+      }
+    }
+  }
+    
   }
 }
