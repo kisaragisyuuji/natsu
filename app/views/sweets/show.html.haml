@@ -34,6 +34,6 @@
       %h9 コメント一覧❤️
       .sewetmain__right__comment
       - if @comments
-        = @comments.each do |co|
+        - @comments.each do |co|
           = co.user.name
           = co.text
