@@ -11,29 +11,35 @@
         = @sweet.name
     .sweetmain__second
       .sweetmain__second__image
-        = image_tag @sweet.image.url, size: "500x400"
+        = image_tag @sweet.image.url, size: "400x300"
     .sweetmain__textbox
       .sweetmain__textbox__line
         .sweetmain__textbox__line__dec
           = @sweet.description
-    .sewetmain__left
-      .sweetmain__left__user
-        .sweetmain__left__user__name
-          = @sweet.user.name 
-        .sweetmain__left__user_good
-          %i.fa.fa-heart
-          いいね
-      .sewetmain__left__form
-        - if current_user  
-          = form_with(model:[@sweet, @comment], local: true) do |f|
-            = f.text_area :text, placeholder: "入力してください", cols: "30", rows: "3"
-            = f.submit "コメント"
-        - else
-          %h8 ユーザー登録してください
-    .sewetmain__right
-      %h9 コメント一覧❤️
-      .sewetmain__right__comment
-      - if @comments
-        - @comments.each do |co|
-          = co.user.name
-          = co.text
+    .sweetmain__comment
+      .sweetmain__comment__left
+        .sweetmain__comment__left__user
+          .sweetmain__comment__left__user__name
+            = @sweet.user.name 
+          .sweetmain__comment__left__user_good
+            %i.fa.fa-heart
+            いいね
+        .sweetmain__comment__left__form
+          - if current_user  
+            = form_with(model:[@sweet, @comment], local: true) do |f|
+              = f.text_area :text, placeholder: "入力してください", cols: "43", rows: "5"
+              .sweetmain__comment__left__form__btn
+                = f.submit "コメントする"
+          - else
+            %h8 ユーザー登録してください
+      .sweetmain__comment__right
+        %h9 コメント一覧❤️
+        .sweetmain__comment__right__comment
+        - if @comments
+          - @comments.each do |co|
+            = co.user.name
+            .sweetmain__comment__right__comment__text
+              = co.text
+    .sweetmain__return
+      .sweetmain__return__btn
+        = link_to "もどる", sweets_path
