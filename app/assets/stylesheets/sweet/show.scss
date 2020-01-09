@@ -82,20 +82,29 @@
       &__right {
         width: 300px;
         background-color: darkblue;
-        
+        text-align: center;
         h9 {
-          color: rgb(45, 241, 241);
+          color: rgb(25, 209, 209);
+          padding: 0.5em 0;
+          border: solid 3px #364e96;
           font-size: 20px;
           
         }
         &__comment {
-          
+          margin-top: 30px;
         &__text {
 
           }
         }
       }
+    }
+    &__return {
+      &__btn{
 
+      }
+      &__edit {
+        
+      }
     }
   }
 }

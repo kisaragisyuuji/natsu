@@ -1,9 +1,3 @@
--# 詳細ページ
--# .test33
--#   = @sweet.name
--#   = link_to "編集する", edit_sweet_path(@sweet.id)
--#   = link_to "削除する", sweet_path(@sweet.id), method: :delete
-
 .showall
   .sweetmain
     .sweetmain__title
@@ -43,3 +37,7 @@
     .sweetmain__return
       .sweetmain__return__btn
         = link_to "もどる", sweets_path
+      .sweetmain__return__edit
+      -if user_signed_in? && current_user.id == @sweet.user_id
+        = link_to "編集する", edit_sweet_path(@sweet.id)
+        = link_to "この投稿を削除する", sweet_path(@sweet.id), method: :delete
