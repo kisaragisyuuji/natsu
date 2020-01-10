@@ -28,7 +28,6 @@
     }
 
     &__textbox {
-      background-color: chartreuse;
       margin-top: 40px;
       
       &__line{
@@ -46,7 +45,6 @@
 
     &__comment {
       display: flex;
-      background-color: rgb(80, 107, 16);
       margin-top: 50px;
       justify-content: center;
       &__left{
@@ -132,11 +130,41 @@
     &__return {
       font-size: 14px;
       color: white;
-      &__btn{
-        
+      &__btn {
+        display: inline;
+        padding: 1px 1px;
+        color: #FF3333;
+        border: solid 2px #FF3333;
+        border-radius: 3px;
+        transition: .4s;
+      }
+      &__btn:hover {
+        background-color: #FF3333;
+        color: white;
       }
       &__edit {
-      
+        display: inline;
+        padding: 1px 1px;
+        color: #FF3333;
+        border: solid 2px #FF3333;
+        border-radius: 3px;
+        transition: .4s;
+      }
+      &__edit:hover {
+        background-color: #FF3333;
+        color: white;
+      }
+      &__delete {
+        display: inline;
+        padding: 1px 1px;
+        color: #FF3333;
+        border: solid 2px #FF3333;
+        border-radius: 3px;
+        transition: .4s;
+      }
+      &__delete:hover {
+        background-color: #FF3333;
+        color: white;
       }
     }
   }
