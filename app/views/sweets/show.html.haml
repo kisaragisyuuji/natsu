@@ -1,5 +1,46 @@
-詳細ページ
-.test33
-  = @sweet.name
-  = link_to "編集する", edit_sweet_path(@sweet.id)
-  = link_to "削除する", sweet_path(@sweet.id), method: :delete
+.showall
+  .sweetmain
+    .sweetmain__title
+      %h7
+        = @sweet.name
+    .sweetmain__second
+      .sweetmain__second__image
+        = image_tag @sweet.image.url, size: "400x300"
+    .sweetmain__textbox
+      .sweetmain__textbox__line
+        .sweetmain__textbox__line__dec
+          = @sweet.description
+    .sweetmain__comment
+      .sweetmain__comment__left
+        .sweetmain__comment__left__user
+          .sweetmain__comment__left__user__name
+            = @sweet.user.name 
+          .sweetmain__comment__left__user_good
+            %i.fa.fa-heart
+            いいね
+        .sweetmain__comment__left__form
+          - if current_user  
+            = form_with(model:[@sweet, @comment], local: true) do |f|
+              = f.text_area :text, placeholder: "入力してください", cols: "42", rows: "5"
+              .sweetmain__comment__left__form__btn
+                = f.submit "コメントする"
+          - else
+            %h8 ユーザー登録してください
+      .sweetmain__comment__right
+        %h9 コメント一覧
+        .sweetmain__comment__right__box
+          - if @comments
+            - @comments.each do |co|
+              .sweetmain__comment__right__box__content
+                .sweetmain__comment__right__box__content__name
+                  = co.user.name
+                .sweetmain__comment__right__box__content__text
+                  = co.text
+    .sweetmain__return
+      .sweetmain__return__btn
+        = link_to "もどる", sweets_path
+      -if user_signed_in? && current_user.id == @sweet.user_id
+        .sweetmain__return__edit
+          = link_to "編集する", edit_sweet_path(@sweet.id)
+        .sweetmain__return__delete
+          = link_to "この投稿を削除する", sweet_path(@sweet.id), method: :delete

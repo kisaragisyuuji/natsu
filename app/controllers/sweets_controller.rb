@@ -23,6 +23,8 @@ class SweetsController < ApplicationController
   end
 
   def show
+     @comment = Comment.new
+     @comments = @sweet.comments.includes(:user)
   end
 
   def edit
