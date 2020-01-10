@@ -3,7 +3,7 @@
   width: 100%;
   
   .sweetmain {
-    background-color: rgb(245, 211, 196);
+    background-color: #FFFFBB;
     padding: 30px 40px;
     display: block;
 
@@ -16,11 +16,11 @@
         display: inline-block;
         border: 2px solid #ddbf37;
         padding: 10px 20px;
+        background-color: #FFAAFF;
       }
     }
 
     &__second {
-      background-color: #8f147e;
       margin-top: 70px;
       &__image {
         text-align: center;
@@ -35,10 +35,10 @@
         display: inline-block;
         border: 2px solid #ddbf37;
         padding: 10px 20px;
-        background-color: red;
+        background-color: white;
         width: 95%;
         &__dec{
-          text-align: center;
+          text-align: left;
           font-size: 20px;
         }
       }
@@ -53,17 +53,20 @@
         margin-right: 100px;
         width: 350px;
         &__user {
-          background-color: blue;
+          background-color: #FFBBFF;
           display: flex;
           margin-top: 10px;
           justify-content: center;
           height: 40px;
+          line-height: 40px;
+          width: 353px;
           &__name {
             font-size: 20px;
         
           }
           .fa-heart {
             color: red;
+            margin-left: 20px;
           }
           &__good {
             font-size: 10px;
@@ -71,39 +74,69 @@
         }
         &__form {
           
-          &__btn{
+          &__btn {
             color: #fff;
-            background-color: rgb(52, 151, 243);
+            width: 120px;
+            border-radius: 40%;
             text-align: center;
+            padding: 4px 5px;
+            text-decoration: none;
+            background-color: #2C7CFF;
+            border-bottom: solid 4px #627295;
+            margin: 0 auto;
+            
+            input {
+              border-style: none;
+              background-color: #2C7CFF;
+            }
+          }
+          &__btn:active {
+            transform: translateY(4px);
+            border-bottom: none;
           }
         }
       }
 
       &__right {
         width: 300px;
-        background-color: darkblue;
+        background-color: #ffcc99;
         text-align: center;
+        box-sizing: border-box;
+        border: 8px dotted #ff66ff;
+        border-radius: 20px;
+        box-shadow: 0 0 0 9px #ffcc99;
+
         h9 {
-          color: rgb(25, 209, 209);
           padding: 0.5em 0;
           border: solid 3px #364e96;
           font-size: 20px;
-          
+          background-color: #FFBBFF;
         }
-        &__comment {
+        &__box {
           margin-top: 30px;
-        &__text {
-
+          &__content {
+            display: flex;
+            margin-top: 10px;
+            &__name {
+              font-size: 14px;
+              margin-left: 15px;
+            }
+            &__text {
+              font-size: 14px;
+              margin-left: 20px;
+            }
           }
         }
       }
     }
     &__return {
+      font-size: 14px;
+      color: white;
       &__btn{
-
+        
       }
       &__edit {
-        
+      
       }
     }
   }
