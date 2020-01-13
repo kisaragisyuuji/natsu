@@ -32,7 +32,7 @@ class SweetsController < ApplicationController
 
   def update
     if @sweet.update(sweet_params)
-      redirect_to sweets_path(params[:id]),notice: '編集しました'
+      redirect_to sweet_path(params[:id]),notice: '編集しました'
     else
       render = :edit
     end
