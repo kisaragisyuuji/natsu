@@ -39,7 +39,7 @@
     }
 
     &__center {
-      
+      z-index: 7;
       .image-keki {
         border-radius: 50%;
         
@@ -47,7 +47,7 @@
     }
 
     &__right {
-      background-color: darkgreen;
+      background-color: rgb(204, 172, 45);
       padding: 10px 15px;
       display: flex;
       border: dashed 2px #AAFFFF;
@@ -59,8 +59,10 @@
         border: solid 2px #FF4F50;
         line-height: 40px;
         margin-right: 30px;
+        
         a {
           color: black;
+          
         }
       }
       &__post {
