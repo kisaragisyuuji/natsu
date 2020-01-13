@@ -2,16 +2,15 @@
 .indexbox
   .formone
     .formone__title
-      %h みんなのスイーツ投稿
+      %h スイーツ投稿
     .formone__box
       検索機能予定地
 
-    -# 投稿されたやつ
-  .indexbox
+  - @sweet.each do |f|
     .indexbox__sweet
-      - @sweet.each do |f|
-        .indexbox__sweet__list
-          = link_to sweet_path(f.id) do
-            .indexbox__sweet__list__name
-              = f.name
-              = image_tag f.image.url, width: "200px", hight: "200px", class: "sweet-image"
+      .indexbox__sweet__list
+        = link_to sweet_path(f.id) do
+          .indexbox__sweet__list__image
+            = image_tag f.image.url, alt: "写真", hight: "200px", width: "200px"
+          .indexbox__sweet__list__name
+            = f.name
