@@ -1,10 +1,16 @@
 .mainheader
   .mainheader__box
     .mainheader__box__left
-      .mainheader__box__left__new
-        = link_to "新規登録", new_user_registration_path
-      .mainheader__box__left__login
-        = link_to "ログイン", new_user_session_path
+      - if user_signed_in?
+        .mainheader__box__left__new
+          = link_to "スイーツ", new_user_registration_path
+        .mainheader__box__left__login
+          = link_to "Natsu", new_user_session_path
+      - else
+        .mainheader__box__left__new
+          = link_to "新規登録", new_user_registration_path
+        .mainheader__box__left__login
+          = link_to "ログイン", new_user_session_path
     .mainheader__box__center
       = image_tag 'keki.jpeg', alt: 'ケーキ', height: '180px', width: '150px', class: 'image-keki'
 
