@@ -1,0 +1,46 @@
+.mainheader {
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+
+  &__box {
+    background-color: brown;
+    padding: 20px 25px;
+    
+    &__left {
+      background-color: rgb(204, 172, 45);
+      padding: 10px 15px;
+      border: dashed 2px #AAFFFF;
+      display: flex;
+      &__new {
+        cursor: pointer;
+        border: solid 2px #FF4F50;
+        
+      }
+      &__login {
+        cursor: pointer;
+        border: solid 2px #FF4F50;
+      }
+    }
+
+    &__center {
+      background-color: cyan;
+      .imagekeki {
+
+      }
+    }
+
+    &__right {
+      background-color: darkgreen;
+      padding: 10px 15px;
+
+      &__access {
+
+      }
+      &__post {
+        
+      }
+    }
+
+  }
+}
