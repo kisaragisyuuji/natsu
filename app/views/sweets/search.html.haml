@@ -9,7 +9,7 @@
           = g.text_field :keyword, placeholder: "スイーツ検索", type: "search"
           = g.submit "検索", class: "formone__box__search__btn"
 
-  - @sweet.each do |f|
+  - @sweets.each do |f|
     .indexbox__sweet
       .indexbox__sweet__list
         = link_to sweet_path(f.id) do
