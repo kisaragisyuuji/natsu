@@ -16,3 +16,5 @@
             = image_tag f.image.url, alt: "写真", hight: "200px", width: "200px"
           .indexbox__sweet__list__name
             = f.name
+= paginate(@sweet)
+

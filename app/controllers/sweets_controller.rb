@@ -5,6 +5,7 @@ class SweetsController < ApplicationController
 
   def index
     @sweet = Sweet.all
+    @sweet = Sweet.includes(:user).page(params[:page]).per(12)
   end
 
   def new
@@ -45,6 +46,7 @@ class SweetsController < ApplicationController
 
   def search
     @sweets = Sweet.search(params[:keyword])
+    @sweet = Sweet.includes(:user).page(params[:page]).per(12)
   end
 
   private
