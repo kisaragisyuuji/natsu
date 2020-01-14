@@ -38,12 +38,16 @@ class SweetsController < ApplicationController
     end
   end
 
-  
   def destroy
     @sweet.destroy
     redirect_to sweets_path
   end
 
+  def search
+    @sweets = Sweet.search(params[:keyword])
+  end
+
+  private
   def set_sweet
     @sweet = Sweet.find(params[:id])
   end
