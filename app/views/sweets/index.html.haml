@@ -4,10 +4,9 @@
     .formone__title
       %h スイーツ投稿
     .formone__box
-      .formone__box__search
-        = form_with(url: search_sweets_path, local: true, method: :get) do |g|
-          = g.text_field :keyword, placeholder: "スイーツ検索", type: "search"
-          = g.submit "検索", class: "formone__box__search__btn"
+      = form_with(url: search_sweets_path, local: true, method: :get) do |g|
+        = g.text_field :keyword, placeholder: "スイーツ検索", type: "search", class: "formone__box__search"
+        = g.submit "検索", class: "formone__box__btn"
 
   - @sweet.each do |f|
     .indexbox__sweet
