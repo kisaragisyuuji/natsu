@@ -1,10 +1,13 @@
 class SweetsController < ApplicationController
   before_action :set_sweet, only:[:show, :edit, :update, :destroy]
+
+  before_action :correct_user, only: [:edit, :update, :destroy]
   def top
   end
 
   def index
     @sweet = Sweet.all
+    @sweet = Sweet.includes(:user).page(params[:page]).per(12)
   end
 
   def new
@@ -45,6 +48,7 @@ class SweetsController < ApplicationController
 
   def search
     @sweets = Sweet.search(params[:keyword])
+    @sweet = Sweet.includes(:user).page(params[:page]).per(12)
   end
 
   private
@@ -56,4 +60,10 @@ class SweetsController < ApplicationController
     params.require(:sweet).permit(:name, :image, :description).merge(user_id: current_user.id)
   end
 
+  def correct_user
+    @sweet = current_user.sweets.find_by(id: params[:id])
+      unless @sweet
+        redirect_to root_url
+      end
+  end
 end
