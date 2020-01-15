@@ -1,7 +1,7 @@
 class SweetsController < ApplicationController
   before_action :set_sweet, only:[:show, :edit, :update, :destroy]
-
   before_action :correct_user, only: [:edit, :update, :destroy]
+  
   def top
   end
 
