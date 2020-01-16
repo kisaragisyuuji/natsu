@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: natsu_production
-  username: natsu
+  username: root
   password: <%= ENV['NATSU_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
