@@ -12,8 +12,7 @@
         .mainheader__box__left__login
           = link_to "ログイン", new_user_session_path
     .mainheader__box__center
-      = image_tag 'keki.jpeg', alt: 'ケーキ', height: '180px', width: '150px', class: 'image-keki'
-
+      = image_tag(src="keki.jpeg",alt:"ケーキ",width: "150px",height:"180px",class: "image-keki")
     .mainheader__box__right
       .mainheader__box__right__access
         %h1 アクセス
