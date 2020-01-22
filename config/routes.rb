@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     end
   end
   get '/top', to: "sweet#top"
+  resources :users
+  get '/mypage', to: "users#mypage"
   root to: 'sweets#top'
 end
